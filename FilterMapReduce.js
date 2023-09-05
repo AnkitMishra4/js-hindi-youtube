@@ -45,4 +45,16 @@ const books = [
   //console.log(NewArr);
 
   NewArr=Arr.map( (i)=>i+10  ).map( (i)=>i+1 ).filter( (i)=>i>20 )
-  console.log(NewArr);
+  //console.log(NewArr);
+
+  //Reduce
+  const Array=[12,32,55,87]
+  const total=Array.reduce(function(accumilator,currentvalue) {
+    console.log(`accumilator value is ${accumilator} and currentvalue is${currentvalue}`);
+  return accumilator+currentvalue;  
+  },0)
+  console.log(total);
+
+  let Shopping=[{item:'shirt',cost:3200},{item:'pant',cost:4200},{item:'jacket',cost:4600}]
+  let Totalbill=Shopping.reduce( (acc,item) => acc+item.cost,0)
+  console.log(Totalbill);
