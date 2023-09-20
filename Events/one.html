@@ -10,8 +10,18 @@
     <button id="stop">stop</button>
 </body>
 <script>
-    setTimeout(function () {
-      console.log(Ankit);  
-    },2000)
+    const fun=function(){
+      console.log("Ankit");  
+    }
+
+    const Change=function(){
+        document.querySelector("h1").innerHTML="Learning Java Script"
+    }
+    setTimeout(Change,2000)
+
+    document.querySelector('#stop').addEventListener('click',function() {
+        clearTimeout(Change)
+        console.log('STOPPED');
+    })
 </script>
 </html>
